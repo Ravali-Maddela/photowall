@@ -1,0 +1,95 @@
+html{
+  font-size: 10px;
+  font-family: 'san-serif';
+}
+p{
+  font-size:1.6rem;
+  line-height : 1.5em;
+}
+
+h1{
+  font-family: 'Billabong';
+  text-align: center;
+  font-size: 11rem;
+  font-weight: 100;
+  margin: 2rem 0;
+  letter-spacing: -1px;
+  color: black;
+}
+.photoGrid{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.figure{
+  flex-basis: calc(33.333% - 4rem);
+  border: 4px solid #d3d3d3;
+  padding: 2rem;
+  flex-grow : 1; 
+}
+.photo{
+  width: calc(100% + 4rem);
+  margin: -2rem 0 2rem -2rem;
+
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+
+}
+button{
+  flex-basis: 40%;
+  color: red;
+  font-size: 15px;
+  border: 2px solid #f2f2f2;
+  line-height: 2;
+  padding: 0 2rem;
+
+}
+
+.addIcon{
+  margin: 20px auto;
+  display: table;
+  padding: 40px;
+  background: url("https://findicons.com/files/icons/1014/ivista/256/plus.png") center no-repeat;
+  background-size: contain;
+  border: none
+  
+}
+.form{
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form input{
+  background-color: #f2f2f2;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 15px;
+  border: none;
+  box-sizing: border-box;
+
+}
+.form button{
+  text-transform: uppercase;
+  background-color: #0d7ab5;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+.form button:hover{
+  background: #5cb8ea;
+}
+
+
+@font-face {
+  font-family: 'Billabong';                                           
+  /* src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix") format('embedded-opentype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff") format('woff'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf") format('truetype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular") format('svg'); */
+  /* src: url(http://fonts.cdnfonts.com/css/billabong); */
+  src: url('../fonts/FontsFree-Net-Billabong.ttf')
+}
