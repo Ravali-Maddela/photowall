@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '16' # or the version you're using in your project
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies (install all packages without uploading node_modules)
       - name: Install dependencies
         run: npm install
 
@@ -41,11 +41,11 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      # Step 5: Upload artifact
+      # Step 5: Upload artifact (the build folder that contains the optimized production files)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'
+          path: './build' # This is where the production build will be located
 
   # Deployment job
   deploy:
@@ -55,6 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-deploy
     steps:
+      # Step 6: Deploy the build folder to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
